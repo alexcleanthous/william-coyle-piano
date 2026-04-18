@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>William Coyle Piano | Online Piano Lessons for Kids &amp; Adults, Australia-Wide</title>
+<meta name="description" content="Private piano lessons for children, teens and adults. Live Zoom lessons anywhere in Australia with William Coyle, Master of Music. 30-minute lessons $80. One-hour lessons $150. Every lesson recorded with summary notes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A1210;
+    --body-text:#2E1F14;        /* 13:1 on cream - AAA */
+    --muted:#4A3422;            /* 7.5:1 on cream - AAA */
+    --cream:#F7F0DD;
+    --cream-warm:#F2E8D1;
+    --parchment:#E9DCBE;
+    --oxblood:#541822;          /* 8:1 on cream - AAA for headings */
+    --burgundy-deep:#2F0C11;
+    --gold:#A88036;             /* decorative gold - reserved for LARGE or dark-bg */
+    --gold-text:#7A5820;        /* 5.5:1 on cream - AA for small text */
+    --gold-soft:#C9A96A;
+    --gold-glow:#E8C888;        /* for text on dark oxblood - 7:1+ */
+    --ivory:#F4EBD8;
+    --rule:rgba(168,128,54,0.32);
+    --rule-strong:rgba(168,128,54,0.6);
+    --focus:#7A5820;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;font-size:17px}
+  body{
+    font-family:'Cormorant Garamond','EB Garamond',Georgia,serif;
+    color:var(--body-text);
+    background:var(--cream);
+    font-size:21px;line-height:1.75;
+    font-weight:500;                   /* Cormorant at 400 is too thin for body */
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;text-decoration:none;transition:color .2s ease}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--oxblood);color:var(--gold-glow)}
+
+  /* Accessibility: focus indicators */
+  a:focus-visible, button:focus-visible, summary:focus-visible, details:focus-visible{
+    outline:3px solid var(--focus);
+    outline-offset:4px;
+    border-radius:2px;
+  }
+  .topbar a:focus-visible{outline-offset:6px}
+
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  .wrap-narrow{max-width:880px;margin:0 auto;padding:0 40px}
+
+  h1,h2,h3,h4{
+    font-family:'Playfair Display',Georgia,serif;
+    font-weight:700;line-height:1.1;letter-spacing:-0.018em;color:var(--ink);
+  }
+  h1{font-size:clamp(34px,3.4vw,50px);font-weight:700;line-height:1.1}
+  h2{font-size:clamp(28px,2.6vw,40px);line-height:1.15}
+  h3{font-size:clamp(20px,1.6vw,24px);font-weight:600;line-height:1.25}
+  h4{font-size:20px;font-weight:600}
+  em{font-style:italic}
+
+  p{font-size:21px;line-height:1.75;color:var(--body-text);font-weight:500}
+
+  .small-caps{
+    display:inline-block;
+    font-family:'Cormorant Garamond',serif;
+    font-variant:all-small-caps;
+    letter-spacing:0.22em;
+    font-size:17px;font-weight:700;
+    color:var(--gold-text);
+  }
+
+  .rule{width:80px;height:1px;background:var(--gold);opacity:0.7;margin:36px 0}
+  .rule.center{margin:36px auto}
+  .ornament{
+    text-align:center;color:var(--gold);
+    margin:0 auto;max-width:240px;
+    display:flex;align-items:center;gap:18px;
+  }
+  .ornament::before,.ornament::after{
+    content:"";flex:1;height:1px;background:var(--gold);opacity:0.55;
+  }
+  .ornament span{
+    font-family:'Playfair Display',serif;font-style:italic;font-weight:400;font-size:20px;color:var(--gold);
+  }
+
+  section{padding:100px 0}
+
+  /* ========== TOP BAR ========== */
+  .topbar{
+    background:var(--cream);border-bottom:1px solid var(--rule);
+    padding:24px 0;position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(8px);
+    background:rgba(247,240,221,0.92);
+  }
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .monogram{
+    font-family:'Playfair Display',serif;font-weight:700;font-size:28px;
+    color:var(--oxblood);letter-spacing:0.01em;
+  }
+  .monogram em{
+    font-style:italic;font-weight:500;color:var(--gold-text);
+    font-size:20px;margin-left:14px;letter-spacing:0.05em;
+  }
+  .top-contacts{display:flex;gap:32px;align-items:center;flex-wrap:wrap;font-size:18px;font-weight:500}
+  .top-contacts a{color:var(--body-text);position:relative}
+  .top-contacts a:hover{color:var(--oxblood)}
+  .top-cta{
+    background:var(--oxblood);color:var(--cream) !important;
+    padding:14px 24px;
+    font-family:'Playfair Display',serif;letter-spacing:0.03em;
+    font-size:16px;font-weight:600;line-height:1;
+    border:1px solid var(--gold);
+    transition:background .25s ease, color .25s ease;
+  }
+  .top-cta:hover{background:var(--burgundy-deep);color:var(--gold-glow) !important}
+
+  /* ========== HERO ========== */
+  .hero{
+    background:var(--oxblood);color:var(--ivory);
+    padding:100px 0 110px;position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(ellipse at 15% 25%,rgba(226,196,136,0.14),transparent 55%),
+      radial-gradient(ellipse at 85% 85%,rgba(47,12,17,0.6),transparent 60%);
+  }
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:70px;align-items:center;position:relative;z-index:2}
+
+  .hero-image-wrap{position:relative}
+  .hero-image-frame{
+    position:relative;
+    box-shadow:0 40px 90px rgba(0,0,0,0.55), 0 10px 30px rgba(0,0,0,0.3);
+  }
+  .hero-image-frame::after{
+    content:"";position:absolute;inset:-14px;
+    border:1px solid var(--gold-soft);pointer-events:none;
+  }
+  .hero-image{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+  .price-seal{
+    position:absolute;top:-28px;right:-28px;
+    width:148px;height:148px;border-radius:50%;
+    background:var(--gold);color:var(--oxblood);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+    transform:rotate(-6deg);z-index:4;
+    border:2px solid var(--gold-glow);
+  }
+  .price-seal::before{
+    content:"";position:absolute;inset:8px;border-radius:50%;
+    border:1px dashed rgba(84,24,34,0.4);
+  }
+  .price-seal .only{
+    font-variant:all-small-caps;letter-spacing:0.22em;
+    font-size:14px;font-weight:700;opacity:0.9;
+  }
+  .price-seal .num{
+    font-family:'Playfair Display',serif;font-weight:700;font-size:54px;line-height:1;margin-top:2px;
+  }
+  .price-seal .num sup{font-size:22px;vertical-align:top;margin-right:2px;font-weight:600}
+  .price-seal .lab{
+    font-family:'Playfair Display',serif;font-style:italic;font-weight:500;
+    font-size:15px;text-align:center;line-height:1.2;padding:0 14px;margin-top:2px;
+  }
+
+  .hero-copy .small-caps{color:var(--gold-glow);margin-bottom:22px;font-size:16px}
+  .hero-copy h1{color:var(--ivory);margin-bottom:24px;max-width:560px}
+  .hero-copy h1 em{color:var(--gold-glow);font-style:italic;font-weight:500}
+  .hero-copy .sub{
+    font-size:19px;line-height:1.6;color:#F0E4C6;
+    margin-bottom:36px;max-width:540px;font-weight:500;
+  }
+  .hero-copy .sub em{color:var(--gold-glow);font-style:italic}
+
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .btn{
+    display:inline-block;padding:20px 36px;
+    font-family:'Playfair Display',Georgia,serif;
+    letter-spacing:0.04em;font-weight:600;font-size:18px;
+    line-height:1;cursor:pointer;border:none;
+    transition:all .25s ease;
+  }
+  .btn-gold{
+    background:var(--gold-glow);color:#3D1017;
+    border:1px solid var(--gold);
+  }
+  .btn-gold:hover{
+    background:#F3D89A;
+    transform:translateY(-2px);
+    box-shadow:0 14px 36px rgba(168,128,54,0.4);
+  }
+  .btn-ghost{
+    color:var(--ivory);border:1px solid rgba(244,235,216,0.45);
+    background:transparent;padding:19px 34px;
+  }
+  .btn-ghost:hover{border-color:var(--gold-glow);color:var(--gold-glow)}
+
+  .hero-pillars{
+    margin-top:44px;padding-top:28px;
+    border-top:1px solid rgba(201,169,106,0.3);
+    display:grid;grid-template-columns:repeat(2,1fr);gap:16px 32px;
+  }
+  .hero-pillars div{
+    color:#F0E4C6;
+    display:flex;align-items:baseline;gap:12px;
+    font-size:17px;font-weight:500;line-height:1.4;
+  }
+  .hero-pillars b{
+    color:var(--gold-glow);
+    font-family:'Playfair Display',serif;font-weight:600;font-style:normal;font-size:18px;
+    min-width:16px;
+  }
+
+  /* ========== INVITATION (Opening Letter) ========== */
+  .invitation{background:var(--cream);padding:100px 0}
+  .invitation .wrap-narrow{text-align:center}
+  .invitation h2{margin:18px 0 28px}
+  .invitation h2 em{color:var(--gold-text);font-style:italic}
+  .invitation .body{text-align:left;max-width:680px;margin:0 auto}
+  .invitation .body p{font-size:19px;line-height:1.75;margin-bottom:18px;color:var(--body-text);font-weight:500}
+  .invitation .body p.first::first-letter{
+    font-family:'Playfair Display',serif;font-weight:700;font-size:60px;
+    float:left;line-height:0.85;margin:6px 12px -2px 0;color:var(--oxblood);
+  }
+  .signature{
+    text-align:center;margin-top:40px;
+    font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:24px;
+    color:var(--oxblood);
+  }
+  .signature .caps{
+    display:block;margin-top:10px;
+    font-variant:all-small-caps;letter-spacing:0.22em;font-size:14px;color:var(--gold-text);font-weight:700;
+    font-family:'Cormorant Garamond',serif;font-style:normal;
+  }
+
+  /* ========== PROGRAMME (What You'll Learn) ========== */
+  .programme{background:var(--parchment);padding:100px 0;position:relative}
+  .programme::before,.programme::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--gold);opacity:0.3;
+  }
+  .programme::before{top:0} .programme::after{bottom:0}
+
+  .section-head{text-align:center;margin-bottom:60px}
+  .section-head h2{margin-top:18px}
+  .section-head .sub{
+    font-size:19px;max-width:620px;margin:20px auto 0;
+    font-style:italic;color:var(--muted);line-height:1.6;font-weight:500;
+  }
+
+  .programme h2 em{color:var(--oxblood)}
+  .programme-list{max-width:960px;margin:0 auto}
+  .prog-item{
+    display:grid;grid-template-columns:88px 1fr;gap:44px;
+    padding:36px 0;border-bottom:1px solid var(--rule);
+    align-items:baseline;
+  }
+  .prog-item:last-child{border-bottom:none}
+  .prog-item .num{
+    font-family:'Playfair Display',serif;font-weight:500;
+    font-size:36px;line-height:1;color:var(--gold-text);letter-spacing:-0.02em;
+  }
+  .prog-item h3{margin-bottom:12px;color:var(--oxblood)}
+  .prog-item p{font-size:19px;line-height:1.7;color:var(--body-text);max-width:640px;font-weight:500}
+
+  /* ========== RECORDINGS ========== */
+  .recordings{background:var(--cream);padding:100px 0}
+  .rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .image-frame{position:relative;box-shadow:0 25px 60px rgba(47,12,17,0.22)}
+  .image-frame::after{
+    content:"";position:absolute;inset:-10px;
+    border:1px solid var(--gold);pointer-events:none;
+  }
+  .rec-image{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+  .rec-copy .small-caps{margin-bottom:16px}
+  .rec-copy h2{margin-bottom:20px}
+  .rec-copy h2 em{color:var(--gold-text);font-style:italic}
+  .rec-copy p{margin-bottom:16px;font-size:19px;line-height:1.7;font-weight:500}
+
+  .rec-list{list-style:none;margin-top:28px;border-top:1px solid var(--rule)}
+  .rec-list li{
+    padding:20px 0 20px 44px;position:relative;
+    border-bottom:1px solid var(--rule);
+  }
+  .rec-list li:last-child{border-bottom:none}
+  .rec-list li::before{
+    content:"❧";font-family:'Playfair Display',serif;
+    position:absolute;left:0;top:16px;
+    color:var(--gold);font-size:26px;line-height:1;
+  }
+  .rec-list li b{
+    display:block;
+    font-family:'Playfair Display',serif;font-weight:600;font-size:19px;
+    color:var(--oxblood);margin-bottom:4px;
+  }
+  .rec-list li span{color:var(--muted);font-size:17px;line-height:1.55;font-weight:500}
+
+  /* ========== TEACHER ========== */
+  .teacher{background:var(--cream-warm);padding:100px 0}
+  .teach-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;align-items:center}
+  .teach-image{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+  .teach-copy h2{margin:16px 0 22px}
+  .teach-copy h2 em{color:var(--gold-text);font-style:italic}
+  .teach-copy p{margin-bottom:16px;font-size:19px;line-height:1.7;max-width:560px;font-weight:500}
+  .teach-copy p em{color:var(--oxblood);font-style:italic}
+
+  .creds{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}
+  .cred-seal{
+    border:1px solid var(--gold);background:var(--cream);
+    padding:10px 18px;
+    font-variant:all-small-caps;letter-spacing:0.12em;font-size:13px;
+    color:var(--oxblood);font-weight:700;
+  }
+
+  /* ========== PUPIL (Who It's For) ========== */
+  .pupil{background:var(--parchment);padding:100px 0}
+  .pupil h2 em{color:var(--oxblood)}
+  .pupil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .pupil-card{
+    background:var(--cream);padding:40px 32px;
+    border:1px solid var(--rule);
+    position:relative;transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .pupil-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 30px 60px rgba(47,12,17,0.12);
+  }
+  .pupil-card .age{
+    font-family:'Playfair Display',serif;font-weight:600;
+    font-size:40px;color:var(--gold-text);line-height:1;margin-bottom:16px;letter-spacing:-0.02em;
+  }
+  .pupil-card h3{color:var(--oxblood);margin-bottom:14px}
+  .pupil-card p{color:var(--body-text);font-size:18px;line-height:1.65;font-weight:500}
+
+  /* ========== PROCESS (How Lessons Proceed) ========== */
+  .process{background:var(--cream);padding:100px 0}
+  .process h2 em{color:var(--gold);font-style:italic}
+  .process-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:32px;
+    position:relative;max-width:1060px;margin:0 auto;
+  }
+  .process-grid::before{
+    content:"";position:absolute;top:36px;left:12%;right:12%;height:1px;
+    background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 16px);
+    opacity:0.4;z-index:0;
+  }
+  .step{text-align:center;position:relative;z-index:1}
+  .step .num{
+    width:72px;height:72px;border-radius:50%;margin:0 auto 20px;
+    background:var(--cream);border:1px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Playfair Display',serif;font-size:24px;
+    color:var(--oxblood);font-weight:600;
+  }
+  .step h3{margin-bottom:12px;color:var(--oxblood);font-size:21px}
+  .step p{font-size:17px;color:var(--muted);line-height:1.6;max-width:240px;margin:0 auto;font-weight:500}
+
+  /* ========== OFFER ========== */
+  .offer{
+    background:var(--burgundy-deep);color:var(--ivory);
+    padding:100px 0;position:relative;
+  }
+  .offer::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse at 30% 50%,rgba(168,128,54,0.14),transparent 65%);
+  }
+  .offer-card{
+    position:relative;z-index:2;max-width:1100px;margin:0 auto;
+    border:1px solid var(--gold);
+    padding:90px 80px;
+    display:grid;grid-template-columns:1.35fr 1fr;gap:70px;align-items:center;
+    background:rgba(84,24,34,0.35);
+    backdrop-filter:blur(4px);
+  }
+  .offer-card .small-caps{color:var(--gold-glow);margin-bottom:22px}
+  .offer-card h2{color:var(--ivory);margin-bottom:28px;max-width:520px;font-size:clamp(32px,3.2vw,48px)}
+  .offer-card h2 em{color:var(--gold-glow);font-style:italic}
+  .offer-card .lede{color:#F0E4C6;margin-bottom:32px;font-size:21px;line-height:1.7;max-width:540px;font-weight:500}
+  .offer-ticks{list-style:none}
+  .offer-ticks li{
+    padding:16px 0 16px 36px;position:relative;
+    color:#F4EBD8;font-size:20px;line-height:1.55;font-weight:500;
+    border-bottom:1px solid rgba(168,128,54,0.22);
+  }
+  .offer-ticks li:last-child{border-bottom:none}
+  .offer-ticks li::before{
+    content:"✦";position:absolute;left:0;top:18px;
+    color:var(--gold-glow);font-size:16px;
+  }
+
+  .offer-price-seal{
+    text-align:center;padding:56px 40px;
+    background:var(--oxblood);border:1px solid var(--gold);
+    position:relative;
+  }
+  .offer-price-seal::before{
+    content:"";position:absolute;inset:10px;
+    border:1px solid rgba(168,128,54,0.3);pointer-events:none;
+  }
+  .offer-price-seal .label-top{
+    font-variant:all-small-caps;letter-spacing:0.22em;font-size:16px;
+    color:var(--gold-glow);margin-bottom:20px;font-weight:700;
+  }
+  .offer-price-seal .big{
+    font-family:'Playfair Display',serif;font-weight:700;font-size:118px;
+    color:var(--gold-glow);line-height:1;
+  }
+  .offer-price-seal .big sup{font-size:44px;vertical-align:top;margin-right:6px;font-weight:500}
+  .offer-price-seal .label-bot{
+    font-family:'Playfair Display',serif;font-style:italic;font-size:22px;
+    color:var(--ivory);margin-top:10px;
+  }
+  .offer-price-seal .btn{margin-top:34px;width:100%}
+  .offer-price-seal .secondary{
+    margin-top:20px;font-size:18px;color:#E4D5B0;font-style:italic;font-weight:500;
+  }
+  .offer-price-seal .secondary a{
+    color:var(--gold-glow);text-decoration:underline;
+    text-decoration-color:rgba(168,128,54,0.5);text-underline-offset:3px;
+  }
+
+  /* ========== RATES ========== */
+  .rates{background:var(--parchment);padding:100px 0;position:relative}
+  .rates::before,.rates::after{
+    content:"";position:absolute;left:0;right:0;height:1px;background:var(--gold);opacity:0.3;
+  }
+  .rates::before{top:0} .rates::after{bottom:0}
+  .rates h2 em{color:var(--oxblood)}
+  .rates-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:28px;
+    max-width:860px;margin:0 auto;
+  }
+  .rate-card{
+    background:var(--cream);padding:44px 36px;
+    border:1px solid var(--gold);text-align:center;position:relative;
+  }
+  .rate-card::before{
+    content:"";position:absolute;inset:8px;
+    border:1px solid rgba(168,128,54,0.3);pointer-events:none;
+  }
+  .rate-card .duration{
+    font-variant:all-small-caps;letter-spacing:0.2em;font-size:15px;
+    color:var(--gold-text);font-weight:700;margin-bottom:16px;
+  }
+  .rate-card .amount{
+    font-family:'Playfair Display',serif;font-weight:700;font-size:76px;
+    color:var(--oxblood);line-height:1;letter-spacing:-0.02em;
+  }
+  .rate-card .amount sup{font-size:30px;vertical-align:top;margin-right:3px;font-weight:500}
+  .rate-card .amount .per{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;
+    font-size:24px;color:var(--gold-text);margin-left:3px;
+  }
+  .rate-card .note{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;
+    color:var(--muted);margin-top:18px;line-height:1.55;font-weight:500;
+  }
+  .rates-cta{margin-top:44px;text-align:center}
+  .rates-foot{
+    max-width:680px;margin:0 auto 28px;
+    font-size:17px;color:var(--muted);font-style:italic;line-height:1.65;font-weight:500;
+  }
+  .rates-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn-gold-alt{
+    background:var(--oxblood);color:var(--cream);
+    border:1px solid var(--gold-text);
+    display:inline-block;padding:20px 36px;
+    font-family:'Playfair Display',serif;
+    letter-spacing:0.04em;font-weight:600;font-size:18px;
+    line-height:1;transition:all .25s ease;
+  }
+  .btn-gold-alt:hover{background:var(--burgundy-deep);color:var(--gold-glow);transform:translateY(-2px)}
+  .btn-outline{
+    background:transparent;color:var(--oxblood);
+    border:1px solid var(--gold-text);
+    display:inline-block;padding:19px 34px;
+    font-family:'Playfair Display',serif;
+    letter-spacing:0.04em;font-weight:600;font-size:18px;
+    line-height:1;transition:all .25s ease;
+  }
+  .btn-outline:hover{background:var(--oxblood);color:var(--cream);border-color:var(--oxblood)}
+
+  /* ========== FAQ ========== */
+  .faq{background:var(--cream);padding:100px 0}
+  .faq h2 em{color:var(--gold);font-style:italic}
+  .faq-list{max-width:820px;margin:0 auto}
+  .faq-item{border-bottom:1px solid var(--rule);padding:22px 0}
+  .faq-q{
+    font-family:'Playfair Display',serif;font-size:clamp(18px,1.6vw,22px);font-weight:600;
+    color:var(--oxblood);
+    display:flex;justify-content:space-between;align-items:flex-start;gap:20px;
+    cursor:pointer;list-style:none;line-height:1.35;
+  }
+  .faq-q::-webkit-details-marker{display:none}
+  .faq-q::after{
+    content:"+";font-family:'Cormorant Garamond',serif;font-size:28px;
+    color:var(--gold);font-weight:400;transition:transform .3s ease;
+    flex-shrink:0;line-height:1;
+  }
+  details[open] .faq-q::after{transform:rotate(45deg)}
+  .faq-a{
+    color:var(--body-text);font-size:18px;margin-top:14px;line-height:1.7;
+    max-width:740px;font-weight:500;
+  }
+
+  /* ========== FINAL CTA ========== */
+  .final{
+    background:var(--oxblood);color:var(--ivory);
+    padding:100px 0;text-align:center;position:relative;overflow:hidden;
+  }
+  .final::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse at center,rgba(168,128,54,0.18),transparent 60%);
+  }
+  .final::after{
+    content:"";position:absolute;inset:28px;
+    border:1px solid rgba(168,128,54,0.25);pointer-events:none;
+  }
+  .final .wrap{position:relative;z-index:2}
+  .final .small-caps{color:var(--gold-glow);margin-bottom:28px}
+  .final h2{
+    color:var(--ivory);max-width:760px;margin:0 auto 22px;
+    font-size:clamp(28px,3vw,44px);line-height:1.15;
+  }
+  .final h2 em{color:var(--gold-glow);font-style:italic}
+  .final .lede{
+    color:#F0E4C6;font-size:18px;
+    max-width:600px;margin:0 auto 36px;line-height:1.65;font-style:italic;font-weight:500;
+  }
+  .final-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .final-contacts{
+    display:flex;gap:44px;justify-content:center;flex-wrap:wrap;
+    margin-top:48px;padding-top:32px;
+    border-top:1px solid rgba(168,128,54,0.25);
+    max-width:660px;margin-left:auto;margin-right:auto;
+  }
+  .final-contacts a{
+    font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;
+    color:#F4EBD8;display:flex;align-items:center;gap:12px;
+  }
+  .final-contacts a:hover{color:var(--gold-glow)}
+  .final-contacts .ico{color:var(--gold-glow);font-size:22px}
+
+  /* ========== FOOTER ========== */
+  footer{
+    background:var(--burgundy-deep);color:#E4D5B0;
+    padding:54px 0;text-align:center;
+  }
+  footer b{
+    color:var(--ivory);font-weight:700;
+    font-family:'Playfair Display',serif;font-size:20px;
+  }
+  footer p{font-size:17px;color:#D9C89F;margin-top:8px;font-weight:500;line-height:1.6}
+  footer .caps{
+    display:block;margin-top:16px;
+    font-variant:all-small-caps;letter-spacing:0.22em;
+    font-size:14px;color:var(--gold-glow);font-weight:700;
+  }
+
+  /* ========== MOBILE ========== */
+  @media (max-width:960px){
+    section{padding:96px 0 !important}
+    .hero{padding:80px 0 100px !important}
+    .wrap,.wrap-narrow{padding:0 24px}
+    .hero .wrap{grid-template-columns:1fr;gap:70px}
+    .price-seal{width:116px;height:116px;top:-16px;right:-10px}
+    .price-seal .num{font-size:40px}
+    .price-seal .num sup{font-size:16px}
+    .hero-copy .sub{font-size:20px}
+    .hero-pillars{grid-template-columns:1fr;gap:16px}
+    .invitation .body p{font-size:20px}
+    .invitation .body p.first::first-letter{font-size:80px;margin-right:14px}
+    .prog-item{grid-template-columns:70px 1fr;gap:28px;padding:40px 0}
+    .prog-item .num{font-size:28px}
+    .prog-item p{font-size:19px}
+    .rec-grid{grid-template-columns:1fr;gap:56px}
+    .teach-grid{grid-template-columns:1fr;gap:56px}
+    .pupil-grid{grid-template-columns:1fr;gap:28px}
+    .process-grid{grid-template-columns:1fr;gap:48px}
+    .process-grid::before{display:none}
+    .offer-card{grid-template-columns:1fr;padding:56px 36px;gap:44px}
+    .rates-grid{grid-template-columns:1fr;gap:28px}
+    .rate-card{padding:48px 36px}
+    .rate-card .amount{font-size:88px}
+    .final::after{inset:24px}
+    .final-contacts{gap:28px;margin-top:48px}
+    .section-head{margin-bottom:60px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="monogram">William Coyle<em>Piano Tuition</em></div>
+    <div class="top-contacts">
+      <a href="tel:0414012626">0414 012 626</a>
+      <a href="mailto:williamtcoyle@gmail.com">williamtcoyle@gmail.com</a>
+      <a href="#rates" class="top-cta">Book a Lesson</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-image-wrap">
+      <div class="hero-image-frame">
+        <img class="hero-image" src="images/hero.jpg" alt="Young student at an antique upright piano, classical salon">
+      </div>
+    </div>
+    <div class="hero-copy">
+      <span class="small-caps">Private Piano Lessons &middot; Live on Zoom &middot; Australia-Wide</span>
+      <h1>Piano lessons for <em>children, teens and adults</em> - live on Zoom, anywhere in Australia.</h1>
+      <p class="sub">Private piano tuition with William Coyle, <em>Master of Music</em>. Twenty years teaching pianists across Australia - five-year-olds making their very first sound, teenagers preparing for AMEB grades, adults returning to the bench. Every lesson recorded, every lesson followed by summary notes - so you always know exactly what to practise.</p>
+      <div class="hero-ctas">
+        <a href="#rates" class="btn btn-gold">Book a piano lesson</a>
+        <a href="tel:0414012626" class="btn btn-ghost">0414 012 626</a>
+      </div>
+      <div class="hero-pillars">
+        <div><b>—</b> Ages 5 to adult, every level</div>
+        <div><b>—</b> Zoom lessons, anywhere in Australia</div>
+        <div><b>—</b> Every lesson recorded in full</div>
+        <div><b>—</b> Summary notes after each lesson</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="invitation">
+  <div class="wrap-narrow">
+    <span class="small-caps">An Invitation</span>
+    <h2>The piano is not a skill. It is <em>a companion for life</em>.</h2>
+    <div class="ornament"><span>&#10086;</span></div>
+    <div class="body">
+      <p class="first">I have been teaching piano for more than twenty years, and in that time I have learned one thing above all others. Students do not quit the piano because they lack talent. They quit because their lessons stop meaning anything to them. Pages of exercises with no music at the end of them. Corrections without context. A technique pursued in the abstract, never tied to the pieces they actually want to play.</p>
+      <p>My approach is different. You bring me the music you want to play - a nocturne by Chopin, a prelude of Rachmaninoff, a film score, a pop ballad, a piece you heard once in a concert hall when you were twelve and have never forgotten. We build your technique in service of that music. Scales, chords, theory, phrasing - all taught as the language that makes those pieces possible.</p>
+      <p>What I ask of you is patience, curiosity, and a willingness to sit at the piano for fifteen minutes a day. What I promise in return is an education in music that will stay with you long after our final lesson.</p>
+    </div>
+    <div class="signature">
+      William Coyle
+      <span class="caps">M.Mus &middot; B.Mus</span>
+    </div>
+  </div>
+</section>
+
+<section class="programme">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="small-caps">The Programme</span>
+      <h2>What you will <em>learn at the piano</em>.</h2>
+      <p class="sub">A complete musical education, structured around the pieces you choose to play.</p>
+    </div>
+    <div class="programme-list">
+      <div class="prog-item">
+        <div class="num">01</div>
+        <div>
+          <h3>Piano Technique</h3>
+          <p>Posture. Hand position. Finger independence. Dynamics and phrasing. The mechanical foundation that separates players who sound stiff from players who sound musical - taught slowly, carefully, without ever losing sight of the music itself.</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="num">02</div>
+        <div>
+          <h3>Repertoire You Love</h3>
+          <p>From chart pop and film themes to Chopin, Debussy, Rachmaninoff, Beethoven. Your repertoire is built around music that actually motivates you to return to the piano - because technique pursued for its own sake is technique soon abandoned.</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="num">03</div>
+        <div>
+          <h3>Reading Music With Fluency</h3>
+          <p>Sight-read with confidence so a new piece of sheet music is an opportunity, not an obstacle. Pattern recognition, intervals, rhythm, inner voices - the skills that turn paper into sound without struggle.</p>
+        </div>
+      </div>
+      <div class="prog-item">
+        <div class="num">04</div>
+        <div>
+          <h3>Theory, Chords, Scales</h3>
+          <p>Music theory taught as it was meant to be - as the language that makes sense of every piece you play. Chords, scales, modes, voicing, harmonic analysis - all woven into living music rather than isolated on a page.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recordings">
+  <div class="wrap">
+    <div class="rec-grid">
+      <div class="image-frame">
+        <img class="rec-image" src="images/recording.jpg" alt="Zoom piano lesson setup with sheet music and warm lamplight">
+      </div>
+      <div class="rec-copy">
+        <span class="small-caps">The Craft Preserved</span>
+        <h2>Every lesson <em>recorded</em>. Every lesson followed by <em>summary notes</em>.</h2>
+        <p>A traditional piano lesson ends when the teacher closes the lid. An hour of corrections, phrasing cues, fingering discoveries - and by Wednesday, half of it is forgotten. That is why progress stalls. Not want of talent. Want of memory.</p>
+        <p>My lessons are different. Every Zoom lesson is recorded in full and sent afterwards with written summary notes - what we worked on, what to practise, which bars of which piece, which exercises and in what order.</p>
+        <ul class="rec-list">
+          <li>
+            <b>Full recording of every lesson</b>
+            <span>Return to the exact moment a phrase was demonstrated, a chord voicing explained, a passage corrected.</span>
+          </li>
+          <li>
+            <b>Written summary notes, every week</b>
+            <span>Precise practice instructions in plain English. Parents know exactly what their child is working on.</span>
+          </li>
+          <li>
+            <b>Your own personal library</b>
+            <span>Yours to keep. A resource you will still be drawing on years from now - and after lessons conclude.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="teacher">
+  <div class="wrap">
+    <div class="teach-grid">
+      <div class="image-frame">
+        <img class="teach-image" src="images/hands.jpg" alt="Pianist's hands at the keyboard in candlelight">
+      </div>
+      <div class="teach-copy">
+        <span class="small-caps">The Teacher</span>
+        <h2>Twenty years of turning beginners into <em>confident pianists</em>.</h2>
+        <div class="creds">
+          <span class="cred-seal">Master of Music</span>
+          <span class="cred-seal">Bachelor of Music</span>
+          <span class="cred-seal">20+ Years Teaching</span>
+          <span class="cred-seal">AMEB Prep</span>
+        </div>
+        <p>William Coyle holds a Master of Music and a Bachelor of Music, and has spent more than two decades teaching pianists at every stage - the five-year-old beginner, the teenager chasing AMEB grades, the adult returner, the professional picking up after years away.</p>
+        <p>His teaching draws from the classical tradition but refuses its worst habit: treating technique as a chore rather than a means. Every scale has a purpose. Every exercise has a piece behind it. Every student leaves each lesson with a <em>clearer sound</em> than when they arrived.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pupil">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="small-caps">The Pupil</span>
+      <h2>From a first piano lesson to <em>a lifetime of playing</em>.</h2>
+      <p class="sub">The principles of good piano teaching do not change with age - only the pace and the repertoire.</p>
+    </div>
+    <div class="pupil-grid">
+      <div class="pupil-card">
+        <div class="age">Ages 5 &ndash; 12</div>
+        <h3>Young Beginners</h3>
+        <p>Patient, encouraging lessons for children aged five to twelve. Musical literacy built through pieces they genuinely want to play. Parents receive full summary notes after every lesson so practice at home is guided, not guessed.</p>
+      </div>
+      <div class="pupil-card">
+        <div class="age">Ages 13 &ndash; 18</div>
+        <h3>Teens &amp; Exam Students</h3>
+        <p>Whether preparing for AMEB piano grades, building a portfolio for conservatory entry, or simply playing for love of it - structured progression that meets the student where they are rather than where a syllabus demands.</p>
+      </div>
+      <div class="pupil-card">
+        <div class="age">Adults</div>
+        <h3>Returners &amp; Beginners</h3>
+        <p>Beginning at forty. Returning after twenty years away. Picking up again after the children have left home. Adult students receive fast-tracked technique and the pieces they have always wished they could play.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="small-caps">How Lessons Proceed</span>
+      <h2>Your piano. Your schedule. <em>No travel</em>.</h2>
+      <p class="sub">Simple setup. Classical instruction. All conducted from your own piano.</p>
+    </div>
+    <div class="process-grid">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Make Contact</h3>
+        <p>Call or email. We discuss your piano, your goals, and a time that suits your schedule.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Your First Lesson</h3>
+        <p>Join the Zoom link at your chosen time, sit at your piano, and we begin. An unhurried first lesson to find your level.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Recording &amp; Notes</h3>
+        <p>The full video recording and written summary notes arrive by email - your practice plan for the week ahead.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Ongoing Lessons</h3>
+        <p>Weekly or fortnightly at a regular time. Recordings build into a personal library that remains yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rates" id="rates">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="small-caps">Lesson Rates</span>
+      <h2>Straightforward pricing. <em>No contracts, no term fees</em>.</h2>
+      <p class="sub">Pay lesson to lesson. Weekly for consistent progress - fortnightly available for adults seeking a slower pace.</p>
+    </div>
+    <div class="rates-grid">
+      <div class="rate-card">
+        <div class="duration">Thirty Minute Lesson</div>
+        <div class="amount"><sup>$</sup>80</div>
+        <p class="note">Ideal for young beginners and students building their first habits at the piano.</p>
+      </div>
+      <div class="rate-card">
+        <div class="duration">One Hour Lesson</div>
+        <div class="amount"><sup>$</sup>150<span class="per">/hr</span></div>
+        <p class="note">Standard for teens, adult learners, exam candidates, and returners with repertoire ambitions.</p>
+      </div>
+    </div>
+    <div class="rates-cta">
+      <p class="rates-foot">Every lesson includes the full video recording and written summary notes. No enrolment fee. No annual contract. Cancel or pause anytime.</p>
+      <div class="rates-buttons">
+        <a href="tel:0414012626" class="btn btn-gold-alt">Call 0414 012 626</a>
+        <a href="mailto:williamtcoyle@gmail.com" class="btn btn-outline">Email William</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="small-caps">Common Questions</span>
+      <h2>Everything you might be <em>wondering</em>.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-q">Do I need a piano at home?</summary>
+        <div class="faq-a">Yes - a piano or full-weighted digital piano is required. An acoustic upright or grand is ideal, but an 88-key digital with weighted keys works beautifully for Zoom lessons and many students begin there. A 61-key unweighted keyboard is acceptable for very young beginners but you will want to upgrade within the first year. If you are unsure what you have, send a photograph and I will advise straight away.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do Zoom piano lessons actually work?</summary>
+        <div class="faq-a">You receive a Zoom link before each lesson. Point your device - laptop, tablet or phone - at your piano so I can see your hands and hear you play. I demonstrate from my own piano. Across twenty years of teaching and thousands of Zoom lessons, the format works remarkably well for piano at every level, from first note to conservatory preparation.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I receive the recording and notes?</summary>
+        <div class="faq-a">After each lesson, I send a private link to the full video recording along with written summary notes covering what we worked on and what to practise that week. They typically arrive within a few hours of the lesson ending.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Where in Australia can I be located?</summary>
+        <div class="faq-a">Anywhere. Zoom piano lessons work in every state and territory - metropolitan, regional, or remote - provided you have a reasonable internet connection. Students in Sydney, Melbourne, Brisbane, Perth, Adelaide, and plenty of smaller towns take lessons with me each week.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How flexible are lesson times?</summary>
+        <div class="faq-a">Very. Lessons run weekdays, evenings, and weekends. Most ongoing students hold the same weekly slot, but times shift around school terms, work rosters, and life events. Tell me your preferred window and I will find a fit.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How long are lessons, and how often?</summary>
+        <div class="faq-a">Thirty-minute lessons are $80 and hour-long lessons are $150. Most students hold a weekly slot - younger children typically take thirty minutes, teens and adults usually opt for the full hour. Fortnightly lessons are available for adults wanting a slower pace.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Do I have to commit to a term?</summary>
+        <div class="faq-a">No. There are no term fees, enrolment fees, or annual contracts. You pay lesson to lesson and can pause or cancel any time - just give reasonable notice so your slot can be offered to someone else.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">I haven't played piano in twenty years. Is it too late?</summary>
+        <div class="faq-a">Not even slightly. Adult returners are among the most rewarding students to teach - you already know what good music sounds like, and the muscle memory from years ago returns faster than you would expect. Many adult students are playing favourite pieces again within a term.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Do you prepare students for AMEB piano exams?</summary>
+        <div class="faq-a">Yes. AMEB and ANZCA piano preparation is available for students wanting structured examination milestones. Most students play for enjoyment rather than exams, but the technique foundation is the same either way.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What ages do you teach?</summary>
+        <div class="faq-a">From five through adulthood. Children under five can sometimes start depending on readiness - get in touch and we will discuss.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <span class="small-caps">Book Your First Lesson</span>
+    <h2>The piano you have meant to play for years is <em>one Zoom call away</em>.</h2>
+    <p class="lede">Thirty minutes $80. One hour $150. No term commitment. No travel. Every lesson recorded and followed by summary notes. One hour at your piano with a teacher who has spent twenty years doing this well.</p>
+    <div class="final-ctas">
+      <a href="tel:0414012626" class="btn btn-gold">Call 0414 012 626</a>
+      <a href="mailto:williamtcoyle@gmail.com" class="btn btn-ghost">Email William</a>
+    </div>
+    <div class="final-contacts">
+      <a href="tel:0414012626"><span class="ico">&#9742;</span> 0414 012 626</a>
+      <a href="mailto:williamtcoyle@gmail.com"><span class="ico">&#9993;</span> williamtcoyle@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>William Coyle Piano Tuition</b>
+    <p>M.Mus &middot; B.Mus &middot; Classical piano lessons by Zoom, Australia-wide &middot; Every lesson recorded</p>
+    <span class="caps">&copy; William Coyle &middot; All Rights Reserved</span>
+  </div>
+</footer>
+
+</body>
+</html>
